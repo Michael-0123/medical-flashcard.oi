@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clavicle</title>
+    <title>Flashcard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -11,57 +11,65 @@
 </head>
 
 <body>
-    <section class="min-h-screen bg-gradient-to-b from-slate-900 to-slate-700 text-white flex items-center justify-center px-6">
+    <section class="min-h-screen bg-gray-50 flex items-center justify-center px-6">
         <div class="text-center max-w-2xl">
              
-            <div class="relative text-center max-w-2xl">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                    Clavicle Osteology Flashcards
+            <div class="relative text-center  max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-light text-black tracking-tight">
+                   Flashcards
                 </h1>
+           </div>
+           <div class="button grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 mt-16">
+                <button data-topic="HPV" class="bg-white border border-black/5  shadow-sm text-black font-medium px-8 py-4 rounded-xl md:px-10 md:py-6 transition duration-300">
+                        Human Papillomavirus (HPV) Vaccine
+                </button>
+                
+                 <button data-topic="Malaria" class="bg-white  text-black border border-black/5 shadow-sm font-medium px-8 py-4 rounded-xl md:px-10 md:py-6 transition duration-300">                    
+                        Malaria
+                 </button>
 
-                <p class="text-lg md:text-xl text-slate-300 mb-10">
-                    Learn the anatomical landmarks of the clavicle with interactive flashcards,
-                    designed for medical students who love osteology.
-                </p>
-
-                <a href="#flashcards"
-                class="bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-8 py-4 rounded-xl transition duration-300">
-                    Start Learning
-                </a>
-        </div>
+                <button data-topic="TumorMarker"    class="bg-white text-black  border border-black/5 shadow-sm font-medium px-8 py-4 rounded-xl md:px-10 md:py-6 transition duration-300">                 
+                        Tumor Markers
+                </button>
+               <button data-topic="RheumaticFever" class="bg-white  text-black border border-black/5 shadow-sm font-medium px-8 py-4 rounded-xl md:px-10 md:py-6 transition duration-300">                   
+                        Rheumatic Fever
+               </button>
+                 <button data-topic="ChronicLeukaemia" class="bg-white  text-black border border-black/5 shadow-sm font-medium px-8 py-4 rounded-xl md:px-10 md:py-6 transition duration-300">
+                        Chronic Myeloid leukaemia           
+                 </button>
+                 <button data-topic="PathologyNutritional" class="bg-white  text-black border border-black/5 shadow-sm font-medium px-8 py-4 rounded-xl md:px-10 md:py-6 transition duration-300">   
+                        Pathology of Nutritional Disorders
+                 </button>
+                
+           </div>
     </section>
-    <section id="flashcards" class="hidden min-h-screen bg-slate-100 flex items-center justify-center px-6 py-20">
-        <div class="max-w-2xl w-full">
-            <div id="card" class="relative bg-white rounded-3xl p-10 shadow-2xl cursor-pointer perspective">
-                <div class="flip-card-inner transition-transform duration-500 transform">
-                    <div class="flip-card-front text-center">
-                        <h2 id="question" class="text-2xl font-bold mb-4">Which end of the clavicle articulates with the sternum?</h2>
-                    </div>
-                    <div class="flip-card-back text-center absolute inset-0 flex items-center justify-center bg-white text-black rounded-3xl backface-hidden">
-                        <p id="answer" class="text-xl font-semibold">Medial (sternal) end</p>
-                    </div>
+    <section id="flashcards" class="hidden min-h-screen bg-gray-50 flex items-center justify-center ">
+        <div class="max-w-3xl w-full">
+            <div class="perspective w-full min-h-[300px] cursor-pointer">
+              <div id="card" class="flip-card-inner">
+                
+                <div class="flip-card-front bg-white rounded-3xl shadow-xl flex items-center justify-center p-8">
+                    <h2 id="question" class="text-xl text-center"></h2>
                 </div>
+                
+                <div class="flip-card-back bg-white text-black rounded-3xl shadow-xl flex items-center justify-center p-8">
+                    <p id="answer" class="text-xl text-center leading-relaxed"></p>
+                </div>
+                
+            </div>
             </div>
 
-            <div id="progress" class="text-center text-slate-700 font-semibold mb-4 mt-4 text-lg"></div>
-
+            <div id="progress" class="text-center mt-6 text-lg font-semibold"></div>
 
             <div class="flex justify-between mt-8">
-                <button id="prev" class="bg-slate-600 hover:bg-slate-700 text-white px-6 py-3 rounded-xl transition duration-300">Previous</button>
-                <button id="next" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-xl transition duration-300">Next</button>
+                <button id="prev" class="bg-black ml-4 text-white px-8 py-3 rounded-xl">Previous</button>
+                <button id="next" class="bg-black mr-4 text-white px-8 py-3 rounded-xl">Next</button>
             </div>
-        </div>
+      </div>
     </section>
 
-    <footer class="fixed bottom-0 w-full bg-slate-900 text-slate-300 text-center py-4 text-sm md:text-base">
-        <p>
-            Made with ❤️ by Akinwumi Mayokun Michael (Mayor)
-        </p>
-    </footer>
 
 
-
-
-<script src="index.js"></script>    
+<script type="module" src="index.js"></script>
 </body>
 </html>
